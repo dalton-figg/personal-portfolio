@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
-	<!-- Meta Tags -->
+    <!-- Meta Tags -->
     <title>Personal Portfolio Site</title>
 
     <meta charset="utf-8" />
@@ -15,44 +15,177 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
 
-	<!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.png" />
 
-	<!-- CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-	<!-- JavaScript -->
+    <!-- JavaScript -->
+    <script src="js/tabs.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
-	<header>
-		<nav>
-			<ul>
-				<li>theme switcher?</li>
-				<li>About Me</li>
-				<li>Projects</li>
-				<li>Contact</li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<h1>Lorem ipsum dolor sit amet.</h1>
-			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate nihil veritatis eos repellendus, esse perspiciatis?</p>
-		</section>
-		<section>
-			<h2>About</h2>
-			<p>Lorem ipsum dolor sit.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi alias, molestiae repellat facere saepe tempore.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ducimus quod vitae!</p>
-		</section>
-		<section>
-			<h2>Projects</h2>
-		</section>
-	</main>
-	<footer></footer>
+    <header class="primary-header | wrapper">
+      <nav class="primary-navbar">
+        <ul class="primary-navbar__list">
+          <li class="primary-navbar__item primary-navbar__item--left">
+            <a href="" class="primary-navbar__link">themes</a>
+          </li>
+          <li class="primary-navbar__item">
+            <a href="" class="primary-navbar__link">About Me</a>
+          </li>
+          <li class="primary-navbar__item">
+            <a href="" class="primary-navbar__link">Projects</a>
+          </li>
+          <li class="primary-navbar__item">
+            <a href="" class="primary-navbar__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero | wrapper">
+        <div class="hero__content">
+          <h1>
+            &lt;/ Lorem ipsum <span class="underlined"> dolor sit amet.</span>
+          </h1>
+          <p>
+            I'm Dalton, adipisicing elit. Cupiditate nihil veritatis eos
+            repellendus, esse perspiciatis?
+          </p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="wrapper">
+          <h2>About</h2>
+          <div class="about__lists">
+            <ul class="about__list">
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+            </ul>
+            <ul class="about__list">
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+              <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+          </div>
+          <h3>
+            X YEARS IN <span class="underlined">WEBSITE DEVELOPMENT</span>
+          </h3>
+          <div class="tabs">
+            <div class="tabs__list" role="tablist" aria-label="Sample Tabs">
+              <button
+                class="tabs__btn"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-1"
+                id="tab-1"
+                tabindex="0"
+              >
+                Apple
+              </button>
+              <button
+                class="tabs__btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-2"
+                id="tab-2"
+                tabindex="-1"
+              >
+                Amazon
+              </button>
+              <button
+                class="tabs__btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-3"
+                id="tab-3"
+                tabindex="-1"
+              >
+                Spotify
+              </button>
+            </div>
+            <div
+              class="tabs__panel"
+              id="panel-1"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-1"
+            >
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, ab? Doloribus beatae ipsum voluptas asperiores!
+              </p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, ab? Doloribus beatae ipsum voluptas asperiores!
+              </p>
+            </div>
+            <div
+              class="tabs__panel"
+              id="panel-2"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-2"
+              hidden
+            >
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                perspiciatis possimus error.
+              </p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+            <div
+              class="tabs__panel"
+              id="panel-3"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-3"
+              hidden
+            >
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, ab? Doloribus beatae ipsum voluptas asperiores!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--light">
+        <div class="wrapper">
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="project">
+              <img
+                class="project__image"
+                width="400"
+                height="266"
+                src="https://images.unsplash.com/photo-1682686581663-179efad3cd2f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h3 class="project__subtitle">Project 1</h3>
+              <div class="project__langs">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>
