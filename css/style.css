@@ -50,7 +50,7 @@ h3 {
 }
 
 section {
-  padding-block: 4.5rem;
+  padding-block: 6rem;
 }
 
 img {
@@ -64,7 +64,7 @@ img {
 @media only screen and (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
-    scroll-padding-top: 1rem;
+    /* scroll-padding-top: 1rem; */
   }
 }
 
