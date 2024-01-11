@@ -1,0 +1,101 @@
+/* ------------------ Contact */
+
+.contact {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-block: 0;
+  grid-template-columns: 40% 60%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact {
+    display: grid;
+    padding-block: 6rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.contact__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background: var(--clr-neutral-100);
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact__aside {
+    border-radius: 1rem;
+  }
+}
+
+.contact__aside h2 {
+  max-width: 350px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-block: 2.5rem;
+  max-width: 295px;
+  margin: 0 auto;
+  width: 100%;
+  justify-self: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact__form {
+    max-width: 550px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact__form {
+    padding: 2.5rem;
+  }
+}
+
+.contact__names {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact__names {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact__name {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__name label {
+  padding-bottom: 1.5rem;
+}
+
+.contact__input {
+  appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--clr-neutral-900);
+  color: var(--clr-neutral-900);
+  padding-bottom: 0.5rem;
+}
+
+.contact__input--submit {
+  border: none;
+  padding: 0;
+  margin-left: auto;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  font-family: var(--fontstack-mono);
+}
+
+.contact__input--submit:where(:hover, :focus) {
+  color: rgb(78 225 160);
+}

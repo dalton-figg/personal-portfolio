@@ -1,76 +1,16 @@
-/* Additional Reset Styles */
-
-:root {
-  --clr-neutral-900: hsl(0, 0%, 100%);
-  --clr-neutral-800: hsl(0, 0%, 80%);
-  --clr-neutral-200: hsl(0, 0%, 10%);
-  --clr-neutral-150: hsl(0 0% 8%);
-  --clr-neutral-100: hsl(0, 0%, 0%);
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  color-scheme: dark light;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
-}
-
-body {
-  color: var(--clr-neutral-800);
-  background: var(--clr-neutral-200);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.emphasis {
+  font-weight: 600;
   color: var(--clr-neutral-900);
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-section {
-  padding-block: 6rem;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  font-style: italic;
-}
-
-/* If a user does not have prefers reduced motion set to reduce, the scrolling will be made smooth */
-
-@media only screen and (prefers-reduced-motion: no-preference) {
-  :has(:target) {
-    scroll-behavior: smooth;
-    /* scroll-padding-top: 1rem; */
-  }
 }
 
 /* Utilities */
 
 .wrapper {
+  /* container based setup without needing padding */
   max-width: min(1280px, 100% - 3rem);
   width: 100%;
   margin: 0 auto;
@@ -81,131 +21,8 @@ img {
   border-bottom: 3px solid rgb(78 225 160);
 }
 
-/* Navbar */
 
-.primary-navbar {
-  padding: 2.5rem 0;
-}
+/* CONTACT */
 
-.primary-navbar__list {
-  display: flex;
-  gap: 3.5rem;
-  list-style-type: none;
-}
 
-.primary-navbar__item--left {
-  margin-right: auto;
-}
 
-.primary-navbar__link {
-  color: var(--clr-neutral-800);
-  text-decoration: none;
-}
-
-/* Hero */
-
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 550px;
-  font-size: 1.125rem;
-}
-
-/* About */
-
-.about {
-  background: var(--clr-neutral-150);
-}
-
-.about .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.about__lists {
-  display: flex;
-  gap: 4.5rem;
-}
-
-.about__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding-left: 40px;
-  list-style: "✓  ";
-}
-
-/* Tabs */
-
-.tabs {
-  display: flex;
-  gap: 5rem;
-  /* padding-left: 40px; */
-}
-
-.tabs__list {
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-  border-left: 1px solid white;
-  padding-left: 25px;
-}
-
-.tabs__btn {
-  appearance: none;
-  border: none;
-  background: none;
-  color: var(--clr-neutral-900);
-  text-align: left;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
-}
-
-.tabs__panel {
-  max-width: 650px;
-}
-
-.tabs__btn[aria-selected="true"] {
-  color: rgb(78 225 160);
-}
-
-.tabs__panel:not([hidden]) {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Projects */
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-block: 2.5rem;
-  gap: 2.5rem;
-}
-
-.project {
-  max-width: 400px;
-}
-
-.project__image {
-  cursor: pointer;
-  transition: all 0.35s ease;
-}
-
-.project__image:hover {
-  filter: brightness(50%);
-}
-
-.project__subtitle {
-  padding-block: 0.75rem;
-}
-
-.project__langs {
-  display: flex;
-  gap: 1.5rem;
-}

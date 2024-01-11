@@ -1,0 +1,234 @@
+/* TODO: 
+typing animation?
+scss + php
+*/
+
+/* ------------------ Additional Reset Styles ------------------ */
+
+:root {
+  /* Both monospace and sans-serif system fontstacks - looks good, access to all font-weights, no downloading many fonts */
+  --fontstack-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  --fontstack-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono",
+    "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+    "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  /* Basic color setup - darkmode by default */
+
+  --clr-neutral-900: hsl(0, 0%, 100%);
+  --clr-neutral-800: hsl(0, 0%, 80%);
+  --clr-neutral-300: hsl(0 0% 18%);
+  --clr-neutral-200: hsl(0, 0%, 10%);
+  --clr-neutral-100: hsl(0, 0%, 0%);
+
+  --clr-accent-600: hsl(153, 71%, 59%);
+}
+
+/* Potential for a light mode swap - reassign the custom properties  */
+
+/* @media (prefers-color-scheme: light) {
+    :root {
+    }
+  } */
+
+/* Remove all the default margin and paddings */
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* Set up which color schemes can be used on the site, may not be required in every project */
+  color-scheme: dark light;
+  /* Make sure font weights look more consistent across the browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Optimise speed for text rendering - looks almost identical */
+  text-rendering: optimizeSpeed;
+}
+
+body {
+  /* Set up all colors */
+  color: var(--clr-neutral-800);
+  background: var(--clr-neutral-200);
+  /* Add default font family */
+  font-family: var(--fontstack-sans);
+  /* Increase line-height to a bare minimum for accessibility */
+  line-height: 1.5;
+}
+
+/* Text-wrap balance to prevent orphans on titles - just makes the copy look a bit cleaner */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  /* Set to color white as default is a grey -> provides a clear distinction alongside the font weights */
+  color: var(--clr-neutral-900);
+}
+
+/* Mobile font sizes */
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* Consistent spacing between each section */
+
+section {
+  padding-block: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding-block: 6rem;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+/* Normal image reset */
+
+img {
+  display: block;
+  max-width: 100%;
+  /* italic makes any alt text become more distinguishable if needed */
+  font-style: italic;
+}
+
+/* If a user does not have prefers reduced motion set to reduce, the scrolling will be made smooth */
+
+/* otherwise it will be set to default -> reduces motion.. no-preference has limited browser support */
+
+@media only screen and (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ------------------ Global Styles ------------------ */
+
+/* ------------------ Navbar */
+
+.primary-navbar {
+  padding: 2.5rem 0;
+}
+
+.primary-navbar__list {
+  display: flex;
+  gap: 3.5rem;
+  list-style-type: none;
+}
+
+.primary-navbar__item--left {
+  margin-right: auto;
+}
+
+.primary-navbar__link {
+  color: var(--clr-neutral-800);
+  text-decoration: none;
+}
+
+.primary-navbar__link:hover {
+  color: var(--clr-neutral-900);
+}
+
+/* ------------------ Footer */
+
+.primary-footer {
+  padding-block: 3rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .primary-footer__upper {
+    display: flex;
+  }
+}
+
+.primary-footer__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .primary-footer__details {
+    padding-bottom: 0;
+  }
+}
+
+.primary-footer__form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  gap: 1rem;
+  color: var(--clr-neutral-900);
+}
+
+.primary-footer__label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.primary-footer__input {
+  /* Responsive Sizes */
+  width: 350px;
+  max-width: 100%;
+  height: 40px;
+  /* Appearance Reset */
+  background: none;
+  appearance: none;
+  border: none;
+  padding-bottom: 0.75rem;
+  color: var(--clr-neutral-900);
+  border-bottom: 2px solid var(--clr-neutral-900);
+}
+
+.primary-footer__input::placeholder {
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+}
+
+.primary-footer__divider {
+  margin-block: 2.5rem;
+  background: linear-gradient(to right, #fff, #2d2d2d, #000);
+  height: 1px;
+  border: none;
+}
+
+.primary-footer__lower {
+  display: flex;
+  align-items: center;
+}
+
+.primary-footer__socials {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
