@@ -97,5 +97,5 @@
 }
 
 .contact__input--submit:where(:hover, :focus) {
-  color: rgb(78 225 160);
+  color: var(--clr-accent-600);
 }

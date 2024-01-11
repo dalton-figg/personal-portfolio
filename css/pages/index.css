@@ -75,7 +75,7 @@
 }
 
 .tabs__btn[aria-selected="true"] {
-  color: rgb(78 225 160);
+  color: var(--clr-accent-600);
 }
 
 .tabs__panel:not([hidden]) {
