@@ -1,12 +1,12 @@
 /* ------------------ Hero */
 
-.hero{
+.hero {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.hero img{
+.hero img {
   object-fit: cover;
 }
 
@@ -203,6 +203,6 @@
   word-wrap: break-word;
 }
 
-.testimonial__letters:where(:focus, :hover){
+.testimonial__letters:where(:focus, :hover) {
   opacity: 0.85;
 }

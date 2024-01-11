@@ -153,7 +153,7 @@ img {
   .primary-header .primary-navbar .primary-navbar__item {
     display: flex;
   }
-  .primary-header .primary-navbar .primary-navbar__item:last-child{
+  .primary-header .primary-navbar .primary-navbar__item:last-child {
     display: none;
   }
 }
