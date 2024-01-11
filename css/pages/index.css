@@ -1,5 +1,15 @@
 /* ------------------ Hero */
 
+.hero{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hero img{
+  object-fit: cover;
+}
+
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -88,16 +98,18 @@
 
 .projects {
   display: grid;
+  /* could 400px be calculated without knowing it previously? scss paired with php.. maybe */
+  grid-template-columns: repeat(auto-fill, 400px);
   justify-content: center;
   padding-top: 2.5rem;
   gap: 2.5rem;
 }
-
+/* 
 @media only screen and (min-width: 1024px) {
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} */
 
 .project {
   max-width: 400px;
