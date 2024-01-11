@@ -190,3 +190,7 @@
   transition: all 0.85s ease;
   word-wrap: break-word;
 }
+
+.testimonial__letters:where(:focus, :hover){
+  opacity: 0.85;
+}

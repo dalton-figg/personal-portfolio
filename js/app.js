@@ -1,6 +1,9 @@
-const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@£$%^&*()_+-={}[];':|,./<>?";
+/* ------------------ Testimonial Text Effect */
 
-const charCount = 100;
+const chars =
+  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@£$%^&*()_+-={}[];':|,./<>?";
+
+let charCount = 20;
 
 const randomChar = () => chars[Math.floor(Math.random() * (chars.length - 1))],
   randomString = length => Array.from(Array(length)).map(randomChar).join("");
@@ -8,13 +11,31 @@ const randomChar = () => chars[Math.floor(Math.random() * (chars.length - 1))],
 const card = document.getElementById("js-blank-card"),
   letters = document.getElementById("js-letters");
 
-letters.innerText = randomString(charCount);
-
-card.onclick = () => {
+if (card) {
   letters.innerText = randomString(charCount);
-  letters.style.opacity = 1;
+
+  card.onclick = () => {
+    letters.innerText = randomString(charCount);
+    letters.style.opacity = 1;
+    letters.style.color = "var(--clr-accent-600)";
+  };
+
+  card.onmouseleave = () => {
+    letters.style.opacity = "";
+    letters.style.color = "";
+  };
+}
+
+/* ------------------ Mobile Navigation */
+
+const navigationMobileMenu = document.getElementById("js-mobile-header");
+const navigationBurger = document.getElementById("js-nav-burger");
+const navigationClose = document.getElementById("js-nav-close");
+
+navigationBurger.onclick = () => {
+  navigationMobileMenu.style.right = 0;
 };
 
-card.onmouseleave = () => {
-  letters.style.opacity = '';
+navigationClose.onclick = () => {
+  navigationMobileMenu.style.right = "";
 };
