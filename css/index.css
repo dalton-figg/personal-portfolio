@@ -55,6 +55,7 @@
   background: var(--clr-neutral-300);
   inset: 0;
   transform: skewY(-4deg);
+  margin-block: -0.5rem;
 }
 
 .about .wrapper {
