@@ -54,7 +54,7 @@
   z-index: -1;
   background: var(--clr-neutral-300);
   inset: 0;
-  transform: skewY(-4deg);
+  transform: skewY(-3deg);
   margin-block: -0.5rem;
 }
 
@@ -94,6 +94,7 @@
 }
 
 .tabs__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -127,6 +128,13 @@
 }
 .tabs__btn:hover, .tabs__btn:focus {
   color: var(--clr-accent-600);
+}
+@media only screen and (min-width: 1024px) {
+  .tabs__btn::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+  }
 }
 
 .tabs__panel {
@@ -166,9 +174,10 @@
   transition: all 0.35s ease;
   border-radius: 1rem;
 }
-
 .project__image:hover {
-  filter: brightness(50%);
+  filter: brightness(120%);
+  filter: contrast(125%);
+  transform: scale(0.95);
 }
 
 .project__subtitle {
