@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .hero img {
@@ -14,8 +15,13 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 550px;
   font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero__content {
+    max-width: 650px;
+  }
 }
 
 /* ------------------ About */
@@ -97,19 +103,21 @@
 /* ------------------ Projects */
 
 .projects {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   /* could 400px be calculated without knowing it previously? scss paired with php.. maybe */
   grid-template-columns: repeat(auto-fill, 400px);
   justify-content: center;
+  align-items: center;
   padding-top: 2.5rem;
   gap: 2.5rem;
 }
-/* 
+
 @media only screen and (min-width: 1024px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
   }
-} */
+}
 
 .project {
   max-width: 400px;
