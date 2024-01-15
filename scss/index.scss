@@ -18,6 +18,21 @@
   }
 }
 
+.hero__typing::after {
+  content: "|";
+  color: var(--clr-neutral-800);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* ------------------ About */
 
 .about .wrapper {

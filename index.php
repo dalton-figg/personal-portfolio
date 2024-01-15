@@ -46,7 +46,7 @@ $testimonials = [
   <div class="hero__content">
     <h1>
       &lt;/ Lorem
-      <span class="underlined" id="js-typing">sit dolor amet.</span>
+      <span class="hero__typing | underlined" id="js-typing">sit dolor amet.</span>
     </h1>
     <p>
       I'm Dalton, adipisicing elit. Cupiditate

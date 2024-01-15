@@ -66,3 +66,41 @@ navigationBurger.onclick = () => {
 navigationClose.onclick = () => {
   navigationMobileMenu.style.right = "";
 };
+
+// Typing Animation
+
+const wantedCopy = ["sit dolor.", "ipsum amet.", "adipisicing."];
+const typingElement = document.getElementById("js-typing");
+const typingSpeed = 200;
+
+let i;
+
+const deleteCharacter = () => {
+  if (typingElement.innerHTML.length > 0) {
+    typingElement.innerHTML = typingElement.innerHTML.slice(0, -1);
+    setTimeout(deleteCharacter, typingSpeed);
+  } else {
+    setTimeout(
+      () => typeCharacter((i = 0), Math.floor(Math.random() * 3)),
+      300
+    );
+  }
+};
+
+const typeCharacter = (i, index) => {
+  // while i is smaller than the length of the word
+
+  if (i < wantedCopy[index].length) {
+    // add the current character
+    typingElement.innerHTML += wantedCopy[index][i];
+    i++;
+    // add delay
+    setTimeout(() => typeCharacter(i, index), typingSpeed);
+  } else {
+    setTimeout(() => deleteCharacter(), 800);
+  }
+};
+
+if (typingElement.innerHTML !== "") deleteCharacter();
+
+if (typingElement.innerHTML === "") typeCharacter();
