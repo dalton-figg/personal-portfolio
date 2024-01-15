@@ -42,7 +42,7 @@
 
 /* ------------------ About */
 
-.about{
+.about {
   transform: skewY(-3deg);
 }
 
@@ -85,7 +85,7 @@
   list-style: "✓  ";
 }
 
-.about__langs{
+.about__langs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,10 +175,10 @@
   transition: all 0.35s ease;
   border-radius: calc-rem(16);
 
-  &:hover{
+  &:hover {
     filter: brightness(120%);
     filter: contrast(125%);
-    transform: scale(0.95)
+    transform: scale(0.95);
   }
 }
 

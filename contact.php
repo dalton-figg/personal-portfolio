@@ -18,6 +18,7 @@ $scripts = [];
     <p><span class="emphasis">Phone: </span> 319135 310</p>
     <p><span class="emphasis">Address: </span> 33 Road Street, Road</p>
     <p><span class="emphasis">Email: </span> email@email.com</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19850.182418885834!2d0.6264093!3d51.5448965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8daf12d72a425%3A0x95a31d0dbfda950a!2sHadleigh%20Castle!5e0!3m2!1sen!2suk!4v1705330275480!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </aside>
   <form class="contact__form">
     <h1>Get in touch!</h1>

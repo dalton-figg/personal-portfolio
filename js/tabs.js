@@ -33,6 +33,10 @@ window.addEventListener("DOMContentLoaded", () => {
       tabs[tabFocus].focus();
     }
   });
+
+  // force a click to fix aria labels from php loop
+  
+  document.getElementById('tab-1').click();
 });
 
 function changeTabs(e) {
@@ -58,3 +62,5 @@ function changeTabs(e) {
     .querySelector(`#${target.getAttribute("aria-controls")}`)
     .removeAttribute("hidden");
 }
+
+

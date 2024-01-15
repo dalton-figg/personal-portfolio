@@ -39,6 +39,24 @@ $testimonials = [
   ],
 ];
 
+$tabs = [
+  [
+    'content' => '2007 - Google', 'id' => '1'
+  ],
+  [
+    'content' => '2009 - Netflix', 'id' => '2'
+  ],
+  [
+    'content' => '2012 - Spotify', 'id' => '3'
+  ],
+  [
+    'content' => '2016 - Lorem', 'id' => '4'
+  ],
+  [
+    'content' => '2020 - Ipsum', 'id' => '5'
+  ],
+]
+
 ?>
 
 <?php include 'partials/navbar.php' ?>
@@ -59,6 +77,7 @@ $testimonials = [
       maxime similique? Corporis rerum doloribus dolore.
     </p>
   </div>
+  <img src="https://images.unsplash.com/photo-1704972841788-86fac20fc87e?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width='500' alt="">
 </section>
 <section class="about | bg-neutral-300" id="about">
   <div class="wrapper">
@@ -88,21 +107,11 @@ $testimonials = [
     </h3>
     <div class="tabs">
       <div class="tabs__list" role="tablist" aria-label="Sample Tabs">
-        <button class="tabs__btn | clr-neutral-900" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
-          2007 - Google
-        </button>
-        <button class="tabs__btn | clr-neutral-900" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
-          2009 - Netflix
-        </button>
-        <button class="tabs__btn | clr-neutral-900" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
-          2012 - Spotify
-        </button>
-        <button class="tabs__btn | clr-neutral-900" role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" tabindex="-1">
-          2016 - Lorem
-        </button>
-        <button class="tabs__btn | clr-neutral-900" role="tab" aria-selected="false" aria-controls="panel-5" id="tab-5" tabindex="-1">
-          2020 - Ipsum
-        </button>
+        <?php foreach ($tabs as $tab) : ?>
+          <button class="tabs__btn | clr-neutral-900" role="tab" aria-selected="true" aria-controls="panel-<?= $tab['id'] ?>" id="tab-<?= $tab['id'] ?>" tabindex="0">
+            <?= $tab['content'] ?>
+          </button>
+        <?php endforeach; ?>
       </div>
       <div class="tabs__panel" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
         <p>

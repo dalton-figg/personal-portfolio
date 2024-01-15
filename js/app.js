@@ -129,3 +129,29 @@ const typeCharacter = (i, index) => {
 if (typingElement.innerHTML !== "") deleteCharacter();
 
 if (typingElement.innerHTML === "") typeCharacter();
+
+// ------------------ Cursor Effect
+
+// const colors = ["cdb4db", "bde0fe", "fb5607", "8ac926"];
+
+// document.onmousemove = e => {
+//   let x = event.clientX;
+//   let y = event.clientY;
+
+//   let newElement = document.createElement("div");
+
+//   let borderRadius = Math.floor(Math.random() * 51);
+
+//   let color = colors[Math.floor(Math.random() * 4)];
+
+//   document.body.appendChild(newElement);
+
+//   newElement.style.position = "absolute";
+//   newElement.style.left = `${x}px`;
+//   newElement.style.top = `${y}px`;
+//   newElement.className = `cursor-trail`;
+//   newElement.style.borderRadius = `${borderRadius}%`;
+//   newElement.style.backgroundColor = `#${color}`;
+
+//   setTimeout(() => document.body.removeChild(newElement), 300);
+// };
