@@ -60,7 +60,7 @@ $testimonials = [
     </p>
   </div>
 </section>
-<section class="about | bg-neutral-300" id="about">
+<section class="about" id="about">
   <div class="wrapper">
     <h2>About</h2>
     <div class="about__lists">

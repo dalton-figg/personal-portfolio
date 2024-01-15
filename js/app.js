@@ -1,5 +1,3 @@
-AOS.init();
-
 /* ------------------ Testimonial Text Effect */
 
 const mediaQuery = window.matchMedia("(min-width: 768px)");
