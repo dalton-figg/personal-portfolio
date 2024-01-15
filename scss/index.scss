@@ -42,20 +42,28 @@
 
 /* ------------------ About */
 
-.about {
-  position: relative;
-  isolation: isolate;
+.about{
+  transform: skewY(-3deg);
 }
 
-.about::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--clr-neutral-300);
-  inset: 0;
-  transform: skewY(-3deg);
-  margin-block: calc-rem(-8);
+.about > * {
+  transform: skewY(3deg);
 }
+
+// .about {
+//   position: relative;
+//   isolation: isolate;
+// }
+
+// .about::after {
+//   content: "";
+//   position: absolute;
+//   z-index: -1;
+//   background: var(--clr-neutral-300);
+//   inset: 0;
+//   transform: skewY(-3deg);
+//   margin-block: calc-rem(-8);
+// }
 
 .about .wrapper {
   @include flex-cols(24);
@@ -75,6 +83,15 @@
   @include flex-cols(24);
   padding-left: calc-rem(40);
   list-style: "✓  ";
+}
+
+.about__langs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc-rem(40);
+  padding-top: calc-rem(24);
 }
 
 /* ------------------ Tabs */

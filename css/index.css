@@ -44,18 +44,11 @@
 }
 /* ------------------ About */
 .about {
-  position: relative;
-  isolation: isolate;
+  transform: skewY(-3deg);
 }
 
-.about::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--clr-neutral-300);
-  inset: 0;
-  transform: skewY(-3deg);
-  margin-block: -0.5rem;
+.about > * {
+  transform: skewY(3deg);
 }
 
 .about .wrapper {
@@ -81,6 +74,15 @@
   gap: 1.5rem;
   padding-left: 2.5rem;
   list-style: "✓  ";
+}
+
+.about__langs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 /* ------------------ Tabs */
