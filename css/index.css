@@ -1,5 +1,5 @@
+@charset "UTF-8";
 /* ------------------ Hero */
-
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -7,54 +7,54 @@
   gap: 1.5rem;
 }
 
-.hero img {
-  object-fit: cover;
-}
-
 .hero__content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  font-size: 18px;
   font-size: 1.125rem;
 }
-
 @media only screen and (min-width: 1280px) {
   .hero__content {
-    max-width: 650px;
+    max-width: 610px;
+    width: 100%;
   }
 }
 
 /* ------------------ About */
-
 .about .wrapper {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 @media only screen and (min-width: 1024px) {
   .about .wrapper {
     gap: 2.5rem;
   }
+}
 
+@media only screen and (min-width: 1024px) {
   .about__lists {
     display: flex;
     gap: 4.5rem;
   }
 }
-
 .about__list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-left: 40px;
+  padding-left: 2.5rem;
   list-style: "✓  ";
 }
 
 /* ------------------ Tabs */
-
 .tabs {
   gap: 5rem;
+}
+@media only screen and (min-width: 1024px) {
+  .tabs {
+    display: flex;
+  }
 }
 
 .tabs__list {
@@ -63,37 +63,40 @@
   gap: 1.5rem;
   padding-bottom: 1.5rem;
 }
-
 @media only screen and (min-width: 1024px) {
-  .tabs {
-    display: flex;
-  }
   .tabs__list {
     border-left: 1px solid var(--clr-neutral-900);
-    padding-left: 25px;
+    padding-left: 1.5625rem;
     padding-bottom: 0;
   }
 }
 
 .tabs__btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: none;
+  outline: none;
   background: none;
-  text-align: left;
+  font-size: 20px;
   font-size: 1.25rem;
+  text-align: left;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all 0.35s ease;
+}
+.tabs__btn[aria-selected=true] {
+  color: var(--clr-accent-600);
+}
+.tabs__btn:hover, .tabs__btn:focus {
+  color: var(--clr-accent-600);
 }
 
 .tabs__panel {
   max-width: 650px;
+  width: 100%;
 }
-
-.tabs__btn[aria-selected="true"] {
-  color: var(--clr-accent-600);
-}
-
 .tabs__panel:not([hidden]) {
   display: flex;
   flex-direction: column;
@@ -101,18 +104,15 @@
 }
 
 /* ------------------ Projects */
-
 .projects {
   display: flex;
   flex-direction: column;
-  /* could 400px be calculated without knowing it previously? scss paired with php.. maybe */
+  gap: 2.5rem;
+  padding-top: 2.5rem;
   grid-template-columns: repeat(auto-fill, 400px);
   justify-content: center;
   align-items: center;
-  padding-top: 2.5rem;
-  gap: 2.5rem;
 }
-
 @media only screen and (min-width: 1024px) {
   .projects {
     display: grid;
@@ -120,7 +120,8 @@
 }
 
 .project {
-  max-width: 400px;
+  max-width: 400;
+  width: 100%;
 }
 
 .project__image {
@@ -149,24 +150,21 @@
 }
 
 /* ------------------ Testimonials */
-
 .testimonials {
   display: flex;
   align-items: center;
   flex-direction: column;
-
   gap: 2rem;
   padding-top: 2.5rem;
 }
-
 @media only screen and (min-width: 1024px) {
   .testimonials {
     display: grid;
     align-items: initial;
+    justify-content: center;
     grid-template-columns: repeat(2, 400px);
   }
 }
-
 @media only screen and (min-width: 1440px) {
   .testimonials {
     grid-template-columns: repeat(3, 400px);
@@ -175,18 +173,23 @@
 
 .testimonial {
   position: relative;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  max-width: 400;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 2.5rem;
-  max-width: 400px;
-  border-radius: 1rem;
 }
-
 .testimonial--blank {
   cursor: pointer;
+  user-select: none;
 }
-
+.testimonial::after {
+  position: absolute;
+  visibility: hidden;
+  content: close-quote;
+}
 .testimonial:not(.testimonial--blank)::before {
   opacity: 0.2;
   left: 0.5rem;
@@ -195,13 +198,8 @@
   position: absolute;
   content: open-quote;
   font-family: sans-serif;
+  font-size: 240px;
   font-size: 15rem;
-}
-
-.testimonial::after {
-  position: absolute;
-  visibility: hidden;
-  content: close-quote;
 }
 
 .testimonial__letters {
@@ -210,7 +208,8 @@
   transition: all 0.85s ease;
   word-wrap: break-word;
 }
-
-.testimonial__letters:where(:focus, :hover) {
+.testimonial__letters:focus, .testimonial__letters:hover {
   opacity: 0.85;
 }
+
+/*# sourceMappingURL=index.css.map */

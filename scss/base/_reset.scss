@@ -1,38 +1,104 @@
-/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+@import "../utilities/index";
 
-/*
-Document
-========
-*/
-
-/**
-Use a better box model (opinionated).
-*/
+/* Remove all the default margin and paddings */
 
 *,
 ::before,
 ::after {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 html {
-  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji";
-  line-height: 1.15; /* 1. Correct the line height in all browsers. */
-  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
-  -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
-  tab-size: 4; /* 3 */
+  /* Set up which color schemes can be used on the site, may not be required in every project */
+  color-scheme: dark light;
+  @include smoothing-antialiased;
 }
-
-/*
-Sections
-========
-*/
 
 body {
-  margin: 0; /* Remove the margin in all browsers. */
+  /* Set up all colors */
+  color: var(--clr-neutral-800);
+  background: var(--clr-neutral-200);
+  /* Add default font family */
+  font-family: var(--fontstack-sans);
+  /* Increase line-height to a bare minimum for accessibility */
+  line-height: 1.5;
 }
+
+/* Text-wrap balance to prevent orphans on titles - just makes the copy look a bit cleaner */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  /* Set to color white as default is a grey -> provides a clear distinction alongside the font weights */
+  color: var(--clr-neutral-900);
+}
+
+/* Mobile font sizes */
+
+h1 {
+  @include font-size(40);
+
+  @include media("laptop") {
+    @include font-size(56);
+  }
+}
+
+h2 {
+  @include font-size(32);
+
+  @include media("laptop") {
+    @include font-size(40);
+  }
+}
+
+h3 {
+  @include font-size(20);
+
+  @include media("laptop") {
+    @include font-size(24);
+  }
+}
+
+/* Consistent spacing between each section */
+
+section {
+  padding-block: calc-rem(32);
+
+  @include media("laptop") {
+    padding-block: calc-rem(96);
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+/* Normal image reset */
+
+img {
+  display: block;
+  max-width: 100%;
+  /* italic makes any alt text become more distinguishable if needed */
+  font-style: italic;
+}
+
+/* If a user does not have prefers reduced motion set to reduce, the scrolling will be made smooth */
+
+/* otherwise it will be set to default -> reduces motion.. no-preference has limited browser support */
+
+@media only screen and (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Grouping content

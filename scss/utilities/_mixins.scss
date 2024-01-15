@@ -1,0 +1,99 @@
+@use "sass:map";
+
+// -- [BROWSER SUPPORT FOCUSED] --
+
+@mixin font-size($px) {
+  font-size: #{$px}px; // [1] - includes support for IE8-
+  font-size: calc-rem($px);
+}
+
+@mixin appearance-reset($background: white) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: $background;
+}
+
+@mixin smoothing-antialiased {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+// -- [HELPFUL SHORTHAND] --
+
+@mixin max-width($max-width, $centered: false) {
+  max-width: $max-width; // [1] - sets maxwidth and ensures width 100% so the element fills the space
+  width: 100%;
+
+  // [2] - optional choice to center the content/element or not
+
+  @if $centered {
+    margin: 0 auto;
+  }
+}
+
+@mixin font-weight($weight) {
+  // [1] - shorthand to set font weights using keyword instead of values
+  @if map_has_key($font-weights, $weight) {
+    $weight: map_get($font-weights, $weight);
+    font-weight: $weight;
+  } @else {
+    @error 'Weight #{$weight} is not a known keyword';
+  }
+}
+
+// [1] - shorthand to set any media query, including max-width queries, using keywords instead of values
+
+@mixin media($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  } @else {
+    @error 'The breakpoint #{$width} is unknown';
+  }
+}
+
+@mixin link-reset($color: black) {
+  color: $color;
+  text-decoration: none;
+}
+
+// - [PAGE SPECIFIC ELEMENTS] -
+
+// -- [FLEX + GRID TOOLBOX] --
+
+@mixin flex-cols($gap: null) {
+  display: flex;
+  flex-direction: column;
+
+  @if $gap {
+    gap: calc-rem($gap);
+  }
+}
+
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

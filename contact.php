@@ -5,7 +5,7 @@ $scripts = [];
 
 <?php include 'partials/navbar.php' ?>
 <section class="contact">
-  <aside class="contact__aside">
+  <aside class="contact__aside | bg-neutral-100">
     <h2>I'd love to hear <span class="underlined">from you!</span></h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
@@ -24,20 +24,20 @@ $scripts = [];
     <div class="contact__names">
       <div class="contact__name">
         <label for="firstname">First name</label>
-        <input type="text" name="firstname" id="firstname" class="contact__input" required />
+        <input type="text" name="firstname" id="firstname" class="contact__input | clr-neutral-900" required />
       </div>
       <div class="contact__name">
         <label for="lastname">Last name</label>
-        <input type="text" name="lastname" id="lastname" class="contact__input" required />
+        <input type="text" name="lastname" id="lastname" class="contact__input | clr-neutral-900" required />
       </div>
     </div>
     <label for="email">Email Address</label>
-    <input type="email" name="email" id="email" class="contact__input" required />
+    <input type="email" name="email" id="email" class="contact__input | clr-neutral-900" required />
     <label for="tel">Phone Number</label>
-    <input type="tel" name="tel" id="tel" class="contact__input" required />
+    <input type="tel" name="tel" id="tel" class="contact__input | clr-neutral-900" required />
     <label for="message">Message</label>
-    <textarea name="message" id="message" class="contact__input" required></textarea>
-    <input type="submit" value="submit" class="contact__input contact__input--submit" />
+    <textarea name="message" id="message" class="contact__input | clr-neutral-900" required></textarea>
+    <input type="submit" value="submit" class="contact__input contact__input--submit | clr-neutral-900" />
   </form>
 </section>
 <?php include 'partials/footer.php' ?>

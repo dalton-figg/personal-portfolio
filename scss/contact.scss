@@ -1,0 +1,78 @@
+@import "../scss/utilities/index";
+
+/* ------------------ Contact */
+
+.contact {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-block: 0;
+  grid-template-columns: 40% 60%;
+
+  @include media(laptop) {
+    display: grid;
+    padding-block: calc-rem(96);
+    @include max-width(1280px, true);
+  }
+}
+
+.contact__aside {
+  @include flex-cols(24);
+  padding: calc-rem(40);
+
+  @include media(laptop) {
+    border-radius: calc-rem(16);
+  }
+}
+
+.contact__form {
+  @include flex-cols(24);
+  @include max-width(295px, true);
+  padding-block: calc-rem(40);
+  justify-self: center;
+
+  @include media(tablet) {
+    @include max-width(550px);
+  }
+
+  @include media(laptop) {
+    padding: calc-rem(24);
+  }
+}
+
+.contact__names {
+  display: grid;
+  gap: calc-rem(40);
+
+  @include media(laptop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact__name {
+  @include flex-cols;
+}
+
+.contact__name label {
+  padding-bottom: calc-rem(24);
+}
+
+.contact__input {
+  @include appearance-reset(none);
+  border-bottom: 2px solid currentColor;
+  padding-bottom: calc-rem(8);
+}
+
+.contact__input--submit {
+  border: none;
+  padding: 0;
+  font-family: var(--fontstack-mono);
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  @include font-weight(semibold);
+
+  &:hover,
+  &:focus {
+    color: var(--clr-accent-600);
+  }
+}

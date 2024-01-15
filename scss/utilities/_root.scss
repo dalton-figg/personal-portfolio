@@ -1,0 +1,33 @@
+@import "variables";
+
+:root {
+  // generates CSS variables from the map of SCSS variables
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  --fontstack-sans: #{$fontstack-sans};
+  --fontstack-mono: #{$fontstack-mono};
+}
+
+// use the css variables to generate utility classes for text color
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .clr-#{$color}-#{$shade} {
+      color: var(--clr-#{$color}-#{$shade});
+    }
+  }
+}
+
+// ..and for background color
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background: var(--clr-#{$color}-#{$shade});
+    }
+  }
+}

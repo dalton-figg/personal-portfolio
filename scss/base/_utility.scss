@@ -1,0 +1,15 @@
+@import "../utilities/index";
+
+.emphasis {
+  @include font-weight(semibold);
+  color: var(--clr-neutral-900);
+}
+
+.wrapper {
+  @include max-width(min(1280px, 100% - 3rem), true);
+}
+
+.underlined {
+  padding-bottom: calc-rem(4);
+  border-bottom: 3px solid var(--clr-accent-600);
+}

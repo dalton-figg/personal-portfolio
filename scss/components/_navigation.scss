@@ -1,0 +1,59 @@
+@import "../utilities/index";
+
+/* ------------------ Navbar */
+
+.primary-navbar {
+  padding: calc-rem(40) 0;
+}
+
+.primary-navbar__list {
+  @include flex-align;
+  gap: calc-rem(56);
+  list-style-type: none;
+}
+
+.primary-navbar__item:not(:first-child):not(:last-child) {
+  display: none;
+}
+
+@media only screen and (min-width: 450px) {
+  .primary-header .primary-navbar .primary-navbar__item {
+    display: flex;
+  }
+  .primary-header .primary-navbar .primary-navbar__item:last-child {
+    display: none;
+  }
+}
+
+.primary-navbar__item--left {
+  margin-right: auto;
+}
+
+.primary-navbar__link,
+.mobile-navbar__link {
+  @include link-reset(var(--clr-neutral-800));
+
+  &:focus,
+  &:hover {
+    color: var(--clr-neutral-900);
+  }
+}
+
+/* ------------------ Mobile Navbar */
+
+.mobile-header {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  right: -150vw;
+  background: var(--clr-neutral-100);
+  padding: calc-rem(24);
+  transition: all 0.35s ease-in;
+}
+
+.mobile-navbar__list {
+  @include flex-cols(24);
+  list-style: none;
+}

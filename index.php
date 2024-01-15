@@ -55,11 +55,10 @@ $testimonials = [
     </p>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta qui
-      aut ratione, autem, repellendus odit numquam itaque nesciunt minus
+      aut ratione, autem, <span class="emphasis">repellendus odit numquam itaque</span> nesciunt minus
       maxime similique? Corporis rerum doloribus dolore.
     </p>
   </div>
-  <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="500" alt="" />
 </section>
 <section class="about | bg-neutral-300" id="about">
   <div class="wrapper">

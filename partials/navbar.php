@@ -22,12 +22,12 @@
     <link rel="apple-touch-icon" href="icon.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/global/reset.css" />
-    <link rel="stylesheet" href="css/global/global.css" />
-    <link rel="stylesheet" href="css/global/utility.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/utility.css" />
 
     <?php foreach ($stylesheets as $stylesheet) : ?>
-        <link rel='stylesheet' href='/css/pages/<?= $stylesheet ?>'>
+        <link rel='stylesheet' href='css/<?= $stylesheet ?>'>
     <?php endforeach; ?>
 
     <!-- JavaScript -->

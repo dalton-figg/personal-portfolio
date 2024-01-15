@@ -1,0 +1,65 @@
+/* ------------------ Footer */
+
+.primary-footer {
+  padding-block: calc-rem(48);
+}
+
+@media only screen and (min-width: 1024px) {
+  .primary-footer__upper {
+    display: flex;
+  }
+}
+
+.primary-footer__details {
+  @include flex-cols(24);
+  padding-bottom: calc-rem(24);
+
+  @include media(laptop) {
+    padding-bottom: 0;
+  }
+}
+
+.primary-footer__form {
+  @include flex-cols(16);
+  margin-left: auto;
+  color: var(--clr-neutral-900);
+}
+
+.primary-footer__label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.primary-footer__input {
+  /* Responsive Sizes */
+  width: 350px;
+  max-width: 100%;
+  height: 40px;
+  /* Appearance Reset */
+  @include appearance-reset(transparent);
+  padding-bottom: calc-rem(12);
+  color: var(--clr-neutral-900);
+  border-bottom: 2px solid var(--clr-neutral-900);
+
+  &::placeholder {
+    @include font-size(12);
+    letter-spacing: 3px;
+  }
+}
+
+.primary-footer__divider {
+  margin-block: 2.5rem;
+  background: linear-gradient(to right, #fff, #2d2d2d, #000);
+  height: 1px;
+  border: none;
+}
+
+.primary-footer__lower {
+  @include flex-align;
+}
+
+.primary-footer__socials {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
