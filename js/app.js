@@ -1,3 +1,5 @@
+AOS.init();
+
 /* ------------------ Testimonial Text Effect */
 
 const mediaQuery = window.matchMedia("(min-width: 768px)");
@@ -67,23 +69,45 @@ navigationClose.onclick = () => {
   navigationMobileMenu.style.right = "";
 };
 
-// Typing Animation
+// ------------------ Typing Animation
 
-const wantedCopy = ["sit dolor.", "ipsum amet.", "adipisicing."];
+// define array of words/strings to be randomly selected
+
+const wantedCopy = [
+  "sit dolor.",
+  "ipsum amet.",
+  "adipisicing.",
+  "ipsum dolor",
+  "ipsum volus",
+  "beatae ipsum",
+  "esse illo",
+];
+
+// set element to a variable
+
 const typingElement = document.getElementById("js-typing");
+
+// define timeout delays
+
 const typingSpeed = 200;
+
+// declare iterator
 
 let i;
 
+const generateRandIndex = () => Math.floor(Math.random() * wantedCopy.length);
+
 const deleteCharacter = () => {
+  // if there is still a string in the innerhtml
+
   if (typingElement.innerHTML.length > 0) {
+    // replace it with itself, minus the last character
     typingElement.innerHTML = typingElement.innerHTML.slice(0, -1);
+    // repeat with delay
     setTimeout(deleteCharacter, typingSpeed);
   } else {
-    setTimeout(
-      () => typeCharacter((i = 0), Math.floor(Math.random() * 3)),
-      300
-    );
+    // once the elements innerHTML is empty, call to type a character (after an arbitrary delay) ensuring to reset the iterator and generate a random word from the array
+    setTimeout(() => typeCharacter((i = 0), generateRandIndex()), 1000);
   }
 };
 
@@ -97,9 +121,12 @@ const typeCharacter = (i, index) => {
     // add delay
     setTimeout(() => typeCharacter(i, index), typingSpeed);
   } else {
-    setTimeout(() => deleteCharacter(), 800);
+    // once word is fully typed out, call for deletion after an arbitrary delay.
+    setTimeout(() => deleteCharacter(), 1000);
   }
 };
+
+// call first instance of either function to start the loop depending on the static page state
 
 if (typingElement.innerHTML !== "") deleteCharacter();
 

@@ -22,6 +22,7 @@
     <link rel="apple-touch-icon" href="icon.png" />
 
     <!-- CSS -->
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/utility.css" />
@@ -34,7 +35,8 @@
     <?php foreach ($scripts as $script) : ?>
         <script src="/js/<?= $script ?>" defer></script>
     <?php endforeach; ?>
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
+
+
     <script src="js/app.js" defer></script>
 
 </head>

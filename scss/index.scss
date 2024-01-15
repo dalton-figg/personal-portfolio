@@ -18,10 +18,17 @@
   }
 }
 
+.hero__typing {
+  opacity: 1;
+  transition: all 0.35s ease;
+}
+
 .hero__typing::after {
-  content: "|";
-  color: var(--clr-neutral-800);
   animation: blink 1s steps(1) infinite;
+  color: var(--clr-neutral-800);
+  content: "|";
+  position: absolute; // ensures that the blue underline disappears when there are no characters left
+  margin-left: calc-rem(6); // adds a more realistic gap between the characters
 }
 
 @keyframes blink {

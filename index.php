@@ -151,7 +151,6 @@ $testimonials = [
   <div class="wrapper">
     <h2>Projects</h2>
     <div class="projects">
-      <!-- nested array loop to define each project with it's individual name, image, and languages token -->
       <?php foreach ($projects as $project) : ?>
         <div class="project">
           <img class="project__image" width="400" height="266" src="<?= $project['image'] ?>" alt="" />
