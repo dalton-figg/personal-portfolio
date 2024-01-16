@@ -17,9 +17,10 @@
     <meta property="og:image" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    
+    <!-- <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="apple-touch-icon" href="icon.png" /> -->
 
     <!-- CSS -->
 
