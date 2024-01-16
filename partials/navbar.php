@@ -7,7 +7,7 @@
 
     <meta charset="utf-8" />
 
-    <meta name="description" content="" />
+    <meta name="description" content="Personal Portfolio Homepage" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fafafa" />
 
@@ -17,7 +17,7 @@
     <meta property="og:image" content="" />
 
     <!-- Favicon -->
-    
+
     <!-- <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.png" /> -->
@@ -38,7 +38,7 @@
     <?php endforeach; ?>
 
 
-    <script src="js/app.js" defer></script>
+    <script src="js/app-min.js" defer></script>
 
 </head>
 
@@ -47,7 +47,7 @@
         <nav class="primary-navbar">
             <ul class="primary-navbar__list">
                 <li class="primary-navbar__item primary-navbar__item--left">
-                    <a href="index.php" class="primary-navbar__link">
+                    <a href="index.php" class="primary-navbar__link" aria-label="Go to homepage">
                         <svg width="24" height="24" viewBox="0 0 640 512">
                             <path fill="currentColor" d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
                         </svg>
@@ -76,7 +76,7 @@
         <nav class="mobile-navbar">
             <ul class="mobile-navbar__list">
                 <li class="mobile-navbar__item">
-                    <a href="#" class="mobile-navbar__link" id="js-nav-close">
+                    <a href="#" class="mobile-navbar__link" id="js-nav-close" aria-label='Close navigatin bar'>
                         <svg width="24" height="24" viewBox="0 0 384 512">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path fill="#fff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3l105.4 105.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256l105.3-105.4z" />

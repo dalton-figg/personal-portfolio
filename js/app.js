@@ -126,9 +126,11 @@ const typeCharacter = (i, index) => {
 
 // call first instance of either function to start the loop depending on the static page state
 
-if (typingElement.innerHTML !== "") deleteCharacter();
+if (typingElement) {
+  if (typingElement.innerHTML !== "") deleteCharacter();
 
-if (typingElement.innerHTML === "") typeCharacter();
+  if (typingElement.innerHTML === "") typeCharacter();
+}
 
 // ------------------ Cursor Effect
 
