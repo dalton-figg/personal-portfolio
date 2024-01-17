@@ -95,6 +95,10 @@ let i;
 
 const generateRandIndex = () => Math.floor(Math.random() * wantedCopy.length);
 
+// test('generate a random number between 0 and the length of the string', () => {
+//   expect(generateRandIndex().toBe(typeof Number))
+// })
+
 const deleteCharacter = () => {
   // if there is still a string in the innerhtml
 
